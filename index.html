@@ -29,6 +29,7 @@
 
     <div class="cols" v-for="rows in rows">
         <div class="cell" v-for="columns in columns">
+            : class="{active: (active[1] == rows && active[1]==columns)}">
             <p>{{ rows }},{{ columns }}</p>
         </div>
     </div>
@@ -39,7 +40,8 @@
         data: {
             message: 'Powodzenia',
             rows: 10,
-            columns:10
+            columns:10,
+            active: [1,1]
         }
     })
     </script>
