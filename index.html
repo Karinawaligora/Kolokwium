@@ -26,11 +26,20 @@
     <div class = "cell">
         <p>1</p>
     </div>
+
+    <div class="cols" v-for="rows in rows">
+        <div class="cell" v-for="columns in columns">
+            <p>{{ rows }},{{ columns }}</p>
+        </div>
+    </div>
+
     <script>
     var app = new Vue({
         el: '#app',
         data: {
-            message: 'Powodzenia'
+            message: 'Powodzenia',
+            rows: 10,
+            columns:10
         }
     })
     </script>
